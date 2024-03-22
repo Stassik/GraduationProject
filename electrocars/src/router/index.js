@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import VueBreadcrumbs from 'vue-breadcrumbs'
 import HomePage from '../views/HomePage.vue'
 import AboutPage from '@/views/AboutPage.vue'
 import BrandsPage from '@/views/BrandsPage.vue'
@@ -10,17 +11,28 @@ import ModelsPage from '@/views/ModelsPage.vue'
 import SingleArticlePage from '@/views/SingleArticlePage.vue'
 
 Vue.use(VueRouter)
+Vue.use(VueBreadcrumbs, {
+  template: '<nav class="breadcrumb" v-if="$breadcrumbs.length"> ' +
+    '<router-link class="breadcrumb-item" v-for="(crumb, key) in $breadcrumbs" :to="linkProp(crumb)" :key="key">{{ crumb | crumbText }}</router-link> ' +
+    '</nav>'
+});
 
 const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomePage
+    component: HomePage,
+    meta: {
+      breadcrumb: 'Главная',
+    },
   },
   {
     path: '/about',
     name: 'about',
-    component: AboutPage
+    component: AboutPage,
+    meta: {
+      breadcrumb: 'О Компании',
+    },
   },
   {
     path: '/brands',
@@ -30,16 +42,25 @@ const routes = [
       // при совпадении пути с шаблоном /user/:id
       // в <router-view> компонента User будет показан UserHome
 
-    ]
+    ],
+    meta: {
+      breadcrumb: 'Авто',
+    },
   },
   {
     path: '/brands/:mark',
     component: ModelsPage,
+    meta: {
+      breadcrumb: ':mark',
+    },
 
   },
   {
     path: '/brands/:mark/:model',
-    component: SingleModelPage
+    component: SingleModelPage,
+    meta: {
+      breadcrumb: ':model',
+    },
   },
   {
     path: '/articles',

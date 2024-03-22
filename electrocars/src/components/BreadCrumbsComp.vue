@@ -1,6 +1,9 @@
 <template>
     <div id="breadcrumbs">
-        <p class="breadcrumbs__list"></p>
+        <ul class="breadcrumbs__list">
+            <li>Главная</li>
+            <li>Текущая</li>
+        </ul>
     </div>
 </template>
 <script>
@@ -8,79 +11,4 @@ export default {
     name: 'BreadCrumbsComp',
 }
 </script>
-<style>
-    #breadcrumbs {
-        position: relative;
-        width: 100%;
-        max-width: 1172px;
-        margin: 0 auto 30px;
-        padding: 100px 16px 0;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 120%;
-    }
-
-    .breadcrumbs__list {
-        margin: 56px 0 30px;
-
-    }
-
-    .breadcrumbs__list>span {
-        display: flex;
-        justify-content: flex-start;
-        gap: 8px;
-        flex-wrap: wrap;
-        align-items: center;
-    }
-
-    .breadcrumbs__list>span span {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
-
-    .breadcrumbs__list .btn__icon {
-        height: 13px;
-        width: 7px;
-    }
-
-    @media(max-width: 999px) {
-        #breadcrumbs {
-            max-width: 641px;
-            padding-top: 66px;
-            margin-bottom: 16px;
-        }
-
-        .breadcrumbs__list {
-            margin: 20px 0 16px;
-
-        }
-    }
-
-    @media(max-width: 640px) {
-        #breadcrumbs {
-            padding-top: 40px;
-        }
-
-        .breadcrumbs__list {
-            margin: 10px 0 12px;
-            font-size: 10px;
-            line-height: 120%;
-        }
-
-        .breadcrumbs__list .btn__icon {
-            width: 5px;
-            height: 10px;
-            position: relative;
-            top: 1px;
-        }
-
-        .breadcrumbs__list>span {
-            gap: 5px;
-        }
-
-        .breadcrumbs__list>span span {
-            gap: 5px;
-        }
-    }
-</style>
+<style></style>
