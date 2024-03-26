@@ -14,9 +14,8 @@ export default {
   components: {
     HeaderComp,
     FooterComp
-  }
+  },
 
 }
 </script>
-
 <style></style>

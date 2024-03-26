@@ -1,6 +1,6 @@
 <template>
     <li class="articles__item">
-        <router-link :to="`${parent}/${post.url}`">
+        <router-link class="articles__item-link " :to="{ name: 'post', params: { post: post.url } }">
             <img :src="`${post.image.url}`" alt="Превью статьи" class="articles__item-img">
             <div class="articles__item-descr">
                 <h2 class="articles__item-title">{{ post.name }}</h2>
@@ -14,7 +14,6 @@ export default {
     name: 'ArticleItemComp',
     props: {
         post: Object,
-        parent: String
     }
 }
 </script>

@@ -11,7 +11,7 @@
     object-fit: none;
 } */
 
-.main .articles-box {
+.home .articles-box {
     display: flex;
     flex-direction: column;
 }

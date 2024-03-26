@@ -10,7 +10,7 @@
 export default {
     name: 'ElectroItemComp',
     props: {
-        post: Object,
+        post: Object(),
     }
 }
 </script>

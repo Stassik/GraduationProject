@@ -12,10 +12,7 @@ body {
     min-height: 100vh;
     font-family: 'Cera Pro';
     background-color: rgb(24, 24, 24);
-    /* background-image: url(/wp-content/themes/Ecomobil/assets/images/BG_logo.png);
-    background-size: 50%;
-    background-position: right -25%;
-    background-repeat: no-repeat; */
+   
 }
 
 .main-container {
@@ -36,10 +33,7 @@ body {
 }
 
 .banner {
-    /* min-height: 675px;
-    max-height: 100vh;
-    width: 100%;
-    aspect-ratio: 2.13 /1; */
+    
     height: 675px;
     width: 100%;
     background-position: center;

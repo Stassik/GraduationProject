@@ -1,5 +1,7 @@
 .article {
     margin-bottom: 204px;
+    display: flex;
+    flex-direction: column;
 }
 
 .article__item {

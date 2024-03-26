@@ -2,7 +2,9 @@
     position: relative;
     padding: 77px 0;
     background: rgb(0, 0, 0);
+    overflow: hidden;
 }
+
 
 .request_light {
     padding: 53px 0 77px;
@@ -44,12 +46,16 @@
     max-width: 1140px;
 }
 
+.request_dark .request__right {
+    order: -1;
+}
+
 .error-box {
     font-size: 14px;
     height: 20px;
 }
 
-.request_light .error-box {
+.request_light .error-box p {
     color: #181818;
 }
 
@@ -57,44 +63,31 @@
 .request__right {
     position: relative;
     width: 100%;
-    justify-content: space-between;
-}
-
-.request__left,
-.request_light .request__right {
-    position: relative;
     max-width: 495px;
 }
 
-.request__right,
-.request_light .request__left {
+
+.request__left {
     max-width: 460px;
 }
 
-.request_light .request__left .logo__box,
-.request_dark .request__right .logo__box {
+.request__left .logo__box {
     display: none;
 }
 
-.request_light .request__right .logo__box,
-.request_dark .request__left .logo__box {
+.request__right .logo__box {
     display: block;
     margin-top: 41px;
 
 }
 
-.request_light .request__right .logo__link,
-.request_dark .request__left .logo__link {
+.request__right .logo__link {
     display: flex;
     justify-content: flex-end;
 }
 
-.request_dark .request__right .logo__box {
-    margin-bottom: 41px;
-}
 
-.request_light .request__right .logo__box .logo__img,
-.request_dark .request__left .logo__box .logo__img {
+.request__right .logo__box .logo__img {
     width: 100%;
     max-width: 292px;
 }
@@ -280,43 +273,35 @@
 
     }
 
-    .request_dark .request__right,
-    .request_light .request__left {
+    .request__left {
         max-width: 293px;
     }
 
-    .request_dark .request__left,
-    .request_light .request__right {
+    .request__right {
         max-width: 238px;
     }
 
     .form__box {
         padding: 44px 16px;
-        margin-bottom: 32px;
+        margin-bottom: 0;
     }
 
     .form__item input {
         min-height: 60px;
     }
 
-    .request_light .request__right .logo__box,
-    .request_dark .request__left .logo__box,
-    .request_light .request__descr {
+    .request__right .logo__box,
+    .request__descr {
         display: none;
     }
 
-    .request_light .request__img-box {
+    .request__img-box {
         bottom: 83px;
         right: -274px;
     }
 
-    .request_light .form {
+    .form {
         position: relative;
-    }
-
-    .request_light .form__box {
-        margin-bottom: 0;
-
     }
 
     .request_light .form__btn {
@@ -371,9 +356,7 @@
     }
 
     .request__left,
-    .request__right,
-    .request_light .request__left,
-    .request_light .request__right {
+    .request__right {
         flex-grow: 1;
         max-width: 360px;
     }
@@ -384,7 +367,8 @@
         padding: 15px 14px;
     }
 
-    .request_light .form__box {
+
+    .form__box {
         margin-bottom: 32px;
     }
 
@@ -400,14 +384,14 @@
         ry: 20px;
     }
 
-    .request_light .request__img-box {
+    .request__img-box {
         aspect-ratio: auto;
         max-height: 240px;
         right: 0;
         bottom: 12px;
     }
 
-    .request_light .request__img {
+    .request__img {
         max-height: 240px;
     }
 
@@ -445,28 +429,24 @@
         margin-bottom: 20px;
     }
 
-    .request_light .request__left .logo__box,
-    .request_dark .request__right .logo__box {
+    .request__left .logo__box {
         display: none;
     }
 
-    .request_light .request__right,
-    .request_dark .request__left {
+    .request__right {
         display: flex;
         flex-direction: column;
         order: -1;
 
     }
 
-    .request_light .request__right .logo__box,
-    .request_dark .request__left .logo__box {
+    .request__right .logo__box {
         margin-top: 0;
         margin-bottom: 20px;
         display: flex;
         justify-content: center;
     }
 
-    .request_light .request__descr,
     .request__descr {
         display: block;
         order: 1;

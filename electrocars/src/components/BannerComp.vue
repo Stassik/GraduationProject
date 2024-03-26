@@ -1,7 +1,7 @@
 <template>
     <div class="banner">
         <div class="banner__img-box">
-            <img src="../assets/images/main-banner.webp" alt="banner" class="banner__img">
+            <img :src="this.fileUrl" alt="banner" class="banner__img">
         </div>
         <BreadCrumbsComp></BreadCrumbsComp>
         <h1 class="banner__title content"></h1>
@@ -13,6 +13,9 @@ export default {
     name: 'BannerComp',
     components: {
         BreadCrumbsComp
+    },
+    props: {
+        fileUrl: String,
     }
 }
 </script>

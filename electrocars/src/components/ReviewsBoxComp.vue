@@ -1,9 +1,11 @@
 <template>
-    <div class="reviews__container content">
-        <h2 class="reviews__title">{{ title }}</h2>
-        <div class="reviews__content">
-            <div class="reviews__box">
-                <ReviewItemComp v-for="post in posts" :key="post.id" :post="post"></ReviewItemComp>
+    <div class="reviews">
+        <div class="reviews__container content">
+            <h2 class="reviews__title">{{ title }}</h2>
+            <div class="reviews__content">
+                <div class="reviews__box">
+                    <ReviewItemComp v-for="post in posts" :key="post.id" :post="post"></ReviewItemComp>
+                </div>
             </div>
         </div>
     </div>
