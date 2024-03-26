@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <HeaderComp></HeaderComp>
-    <router-view></router-view>
+    <transition name="fade">
+      <router-view></router-view>
+    </transition>
     <FooterComp></FooterComp>
   </div>
 </template>
@@ -18,4 +20,17 @@ export default {
 
 }
 </script>
-<style></style>
+<style>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .5s;
+}
+
+.fade-enter,
+.fade-leave-to
+
+/* .fade-leave-active до версии 2.1.8 */
+  {
+  opacity: 0;
+}
+</style>

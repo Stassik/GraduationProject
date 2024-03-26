@@ -4,7 +4,6 @@
             <img :src="this.fileUrl" alt="banner" class="banner__img">
         </div>
         <BreadCrumbsComp></BreadCrumbsComp>
-        <h1 class="banner__title content"></h1>
     </div>
 </template>
 <script>

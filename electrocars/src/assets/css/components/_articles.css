@@ -65,7 +65,7 @@
 .articles__item {
     /* width: calc((100% - 40px) / 3);
     min-width: 300px; */
-    max-height: 352px;
+    min-height: 352px;
     border-radius: 10px;
     display: flex;
     position: relative;
